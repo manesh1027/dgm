@@ -7,7 +7,7 @@
 }
 
 body{
-  /* width: 100vw; */
+  width: 100vw;
 }
 
 .yellowtail-regular {
@@ -85,25 +85,3 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
 } 
-
-#gallery {
-    column-count: 2;  /* Create 2 columns */
-    column-gap: 10px; /* Gap between columns */
-    padding:5px 10px;
-    /* background-color: #293037; */
-}
-
-#gallery div {
-    break-inside: avoid; /* Prevent items from breaking across columns */
-    margin-bottom: 10px; /* Space between items */
-    display: inline-block; /* Required for proper flow */
-    width: 100%; /* Ensure each div takes full column width */
-    height: auto; /* Let height be determined by content */
-   
-}
-
-#gallery :first-child {
-    width: 100%;
-    border-radius: 5px;
-}
-
