@@ -3,83 +3,66 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body{
-    
-    background-color: #f5f5f5;
-}   
-
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 10rem;
-    background-color: #645bff;
-    color: white;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    background-color: #333;
+}
+#second-div a{
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none;
+}
+#logo{
+    color: white; 
+    font-size: 24px;
 }
 
-nav :nth-child(2){
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 30%;
-}
-button {
-    --primary-color: #645bff;
-    --secondary-color: #fff;
-    --hover-color: #111;
-    --arrow-width: 10px;
-    --arrow-stroke: 2px;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 20px;
-    color: var(--secondary-color);
-    padding: 1em 1.8em;
-    background: var(--primary-color);
-    display: flex;
-    transition: 0.2s background;
-    align-items: center;
-    gap: 0.6em;
-    font-weight: bold;
-  }
-  
-  button .arrow-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  button .arrow {
-    margin-top: 1px;
-    width: var(--arrow-width);
-    background: var(--primary-color);
-    height: var(--arrow-stroke);
-    position: relative;
-    transition: 0.2s;
-  }
-  
-  button .arrow::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    border: solid var(--secondary-color);
-    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+/* From Uiverse.io by adamgiebl */ 
+#nav-btn {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     display: inline-block;
-    top: -3px;
-    right: 3px;
-    transition: 0.2s;
-    padding: 3px;
-    transform: rotate(-45deg);
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
   }
   
-  button:hover {
-    background-color: var(--hover-color);
+  #nav-btn:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
   }
   
-  button:hover .arrow {
-    background: var(--secondary-color);
+  #nav-btn:hover, button:focus {
+    color: white;
   }
   
-  button:hover .arrow:before {
+  #nav-btn:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
     right: 0;
+    opacity: 1;
+  }
+  
+  #nav-btn:active {
+    transform: scale(0.9);
   }
