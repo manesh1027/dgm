@@ -1,14 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Yellowtail&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+  /* width: 100vw; */
+}
+
+.yellowtail-regular {
+  font-family: "Yellowtail", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
 nav{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 10px; 
-    background-color: #333;
+    background-color: #4272a5;
 }
 #second-div a{
     color: white; 
@@ -17,7 +31,7 @@ nav{
 }
 #logo{
     color: white; 
-    font-size: 24px;
+    font-size: 2.5rem;
 }
 
 
@@ -66,3 +80,33 @@ nav{
   #nav-btn:active {
     transform: scale(0.9);
   }
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; */
+} 
+
+#gallery {
+    column-count: 2;  /* Create 2 columns */
+    column-gap: 10px; /* Gap between columns */
+    padding: 20px;
+    /* background-color: #293037; */
+}
+
+#gallery div {
+    break-inside: avoid; /* Prevent items from breaking across columns */
+    margin-bottom: 10px; /* Space between items */
+    display: inline-block; /* Required for proper flow */
+    width: 100%; /* Ensure each div takes full column width */
+    height: auto; /* Let height be determined by content */
+}
+
+#gallery :first-child {
+    width: 100%;
+    border-radius: 5px;
+}
+
