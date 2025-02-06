@@ -4,35 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Twilight Moments</title>
     <link rel="stylesheet" href="homestyle.css">
 </head>
 
 <body>
+    
     <nav>
-        <div id="logo" class="yellowtail-regular"><span style="color: #FFC62A;">T</span>wilight <span
-                style="color: #F76657;">M</span>oments</div>
+        <div id="logo" class="yellowtail-regular" style="color: #5F7568;">
+            <span style="color: #FFC62A;">T</span>wilight
+            <span style="color: #F76657;">M</span>oments
+        </div>
+
         <div id="second-div">
-            <a href="../homepg/index.html">Home</a>
-            <a href="../aboutus/index.html">About</a>
-            <a href="../services/index.html">Services</a>
-            <a href="../contact/index.html">Contact</a>
+            <a id="home" href="../homepg/index.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn"><i class="fa-solid fa-bars" style="scale: 1.6;"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Dairy</a>
+                    <a href="#">Contact</a>
+                    <a href="#">About US</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div id="main">
-        <div id="content" style="background-color: aqua;">
-            TEXT
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae incidunt cupiditate expedita repellat minus
-            dolores voluptatibus dolorem distinctio molestiae, facere fuga ab optio neque officiis dignissimos voluptas,
-            at quos voluptate?
+    <div id="main-div">
+        <div id="heading-div">
+            <h1 class="oleo-script-regular">Twilight</h1>
+            <p class="smooch-sans">Create Your Moments</p>
         </div>
-        <div id="gallery" style="background-color: #FFC62A;">
 
+        <div class="img-container">
+            
+            <div class="slider-box" style="height: 180px; margin-top: 11px;">
+                <img class="slider-img" src="../stock/carbday.jpg" alt="Image 1">
+                <h3>B'Days</h3>
+            </div>
+            
+            <div class="slider-box">
+              <img class="slider-img" src="../stock/movie.jpg" alt="Image 2">
+              <h3>Dates</h3>
+            </div>
+            <div class="slider-box" style="height: 180px; margin-top: 11px;">
+              <img class="slider-img" src="../stock/giftbox.jpg" alt="Image 3">
+              <h3>Gifts</h3>
+            </div>
+        </div>
+        
+    </div>
 
+    <div id="about-us">
+        <h2 class="oleo-script-regular">
+            Why Choose US
+        </h2>
+        <p class="smooch-sans">
+            Love is in the details, and we create <span class="bold">unforgettable romantic experiences</span> tailored just for you. Whether it’s a <span class="bold">surprise date night, dreamy candlelight dinner, intimate picnic, anniversary celebration, or a magical proposal</span>, we turn your special moments into cherished memories. 
+        </p>
+    </div>
 
+    <div id="diary">
+        <div id="diary-heading">
+            <h1 class="oleo-script-regular">DIARY</h1>
+            <button class="smooch-sans">Explore</button>
+        </div>
+
+        <div id="diary-content">
+            <div class="diary-box">
+                <img class="diary-img" src="../stock/carbday.jpg" alt="Diary 1">
+                <h3>Diary 1</h3>
+                <p class="smooch-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.</p>
+            </div>
+            <div class="diary-box">
+                <img class="diary-img" src="../stock/carbday.jpg" alt="Diary 2">
+                <h3>Diary 2</h3>
+                <p class="smooch-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.</p>
+            </div>
+            <div class="diary-box">
+                <img class="diary-img" src="../stock/carbday.jpg" alt="Diary 3">
+                <h3>Diary 3</h3>
+                <p class="smooch-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.</p>
+            </div>
+
+            <div class="diary-box">
+                <img class="diary-img" src="../stock/carbday.jpg" alt="Diary 3">
+                <h3>Diary 4</h3>
+                <p class="smooch-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.</p>
+            </div>
+
+            <div class="diary-box">
+                <img class="diary-img" src="../stock/carbday.jpg" alt="Diary 3">
+                <h3>Diary 5</h3>
+                <p class="smooch-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.</p>
+            </div>
         </div>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
