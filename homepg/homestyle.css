@@ -29,7 +29,10 @@ body {
   font-family: "Smooch Sans", serif;
   font-optical-sizing: auto;
   font-weight: 500;
+  word-wrap: break-word;                                  /*change made*/
+  overflow-wrap: break-word;                             /*change made*/                    
   font-style: normal;
+  margin-bottom: 0;                                  /*change made*/
 }
 
 .yellowtail-regular {
@@ -168,10 +171,12 @@ nav {
   /* justify-content: center; */
   padding-top: 2rem;
   align-items: center;
-  height: 250px;
+  height: auto;                     /*change made*/
+  /* min-height: 240px; */
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 #about-us h2 {
@@ -253,13 +258,15 @@ nav {
     justify-content: center;
     width: 100%;
     padding: 2rem;
+    align-items: start;                                    /*change made*/
     /* padding-top: 4px; */
   }
 
  .diary-box{
   /* width: 200px; */
-  height: auto; /* Remove fixed height to accommodate content */
-  border-radius: 10px;
+  height: auto !important; /* Remove fixed height to accommodate content */         /*change made*/
+  border-radius: 10px;                           
+  align-self: start;                                                               /*change made*/
   background-color: white;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -314,6 +321,7 @@ nav {
   width: 180px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 2rem;
 }
 #icons i{
