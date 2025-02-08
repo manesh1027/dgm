@@ -271,3 +271,52 @@ nav {
   object-fit: cover;
   border-radius: 10px 10px 0 0;
  }
+
+
+ /*contact us div styling*/
+
+ #contactus-div{
+
+  background-color:#30442B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#connect{
+  color: #ddd;
+}
+#connect h2{
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+
+#bunny-div{
+ width: 250px;
+  height: 350px;
+  overflow: hidden;
+  /* border-radius: 10px; */
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+
+}
+
+#bunny-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+#icons{
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+#icons i{
+  color: #fff;
+  
+}

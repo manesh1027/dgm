@@ -45,3 +45,27 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("d1").onclick = function () {
     window.location.href = "../contact/index.html";
 };
+
+document.getElementById("d2").onclick = function () {
+    window.location.href = "../contact/index.html";
+};
+
+document.getElementById("d3").onclick = function () {
+    window.location.href = "../contact/index.html";
+};
+
+document.getElementById("d4").onclick = function () {
+    window.open("../contact/index.html");
+};
+
+document.getElementById("insta").onclick = function () {
+    window.open("https://www.instagram.com/twilightmoments.goa/","_blank");
+};
+
+document.getElementById("whatsapp").onclick = function () {
+    window.open("https://wa.me/9356960835?text=Hello there!","_blank");
+};
+
+document.getElementById("phone").onclick = function () {
+    window.location.href="tel:+919834061531";
+};
