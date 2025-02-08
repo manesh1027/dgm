@@ -184,24 +184,33 @@ nav {
 
 /*diary styling*/
 #diary{
+  /* background-color: #EEF2E3; */
   background-color: #EEF2E3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 25px;
 }
 
-#diary #diary-heading {
+#diary-heading {
   display: flex;
-  padding-top: 1rem;
+  padding-top: 2rem;
   justify-content: space-between;
   padding-left: 2rem;
   padding-right: 2rem;
+  background-color: #EEF2E3;
+  /* column-gap: 3rem; */
 }
 
-#diary #diary-heading h1 {
+#diary-heading h1 {
   /* padding-left: 2rem; */
  color: #404F46;
- letter-spacing: 10px;
+ letter-spacing: 6px;
 }
 
-#diary #diary-heading button {
+#diary-heading button {
   appearance: none;
   background-color: transparent;
   border: 1px solid #404F46;
@@ -221,18 +230,18 @@ nav {
   will-change: transform;
  }
  
- #diary #diary-heading button:disabled {
+#diary-heading button:disabled {
   pointer-events: none;
  }
  
-#diary #diary-heading button:hover {
+#diary-heading button:hover {
   color: #fff;
   background-color: #404F46;
   box-shadow: #404F46;
   transform: translateY(-2px);
- }
+}
  
- #diary #diary-heading button:active {
+#diary-heading button:active {
   box-shadow: none;
   transform: translateY(0);
  }
@@ -242,12 +251,9 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     justify-content: center;
-    padding: 2rem;
-    max-width: 1200px; /* Limit maximum width */
-    margin: 0 auto; /* Center the grid container */
-    /* grid-template-columns: repeat(auto-fill, 200px); /*Fixed width columns */
     width: 100%;
-
+    padding: 2rem;
+    /* padding-top: 4px; */
   }
 
  .diary-box{

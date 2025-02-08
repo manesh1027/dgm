@@ -39,3 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+//redirecting to diffrent pages when clicked on images or divs!
+document.getElementById("d1").onclick = function () {
+    window.location.href = "../contact/index.html";
+};
