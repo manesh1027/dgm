@@ -43,19 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //redirecting to diffrent pages when clicked on images or divs!
 document.getElementById("d1").onclick = function () {
-    window.location.href = "../contact/index.html";
+    window.location.href = "../diarys/d1.html";
 };
 
 document.getElementById("d2").onclick = function () {
-    window.location.href = "../contact/index.html";
+    window.location.href = "../diarys/d2.html";
 };
 
 document.getElementById("d3").onclick = function () {
-    window.location.href = "../contact/index.html";
+    window.location.href = "../diarys/d3.html";
 };
 
 document.getElementById("d4").onclick = function () {
-    window.open("../contact/index.html");
+    window.location.href = "../diarys/d4.html";
 };
 
 document.getElementById("insta").onclick = function () {
@@ -63,7 +63,7 @@ document.getElementById("insta").onclick = function () {
 };
 
 document.getElementById("whatsapp").onclick = function () {
-    window.open("https://wa.me/9356960835?text=Hello there!","_blank");
+    window.open("https://wa.me/9356960835?text=Hello%20there!","_blank");
 };
 
 document.getElementById("phone").onclick = function () {

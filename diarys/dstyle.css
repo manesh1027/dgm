@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&family=Oleo+Script:wght@400;700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Yellowtail&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*font styles*/
+.oleo-script-regular {
+  font-family: "Oleo Script", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bold {
+  color:#404F46 ;
+  font-weight: bold;
+}
+
+.smooch-sans {
+  font-family: "Smooch Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  word-wrap: break-word;                                  /*change made*/
+  overflow-wrap: break-word;                             /*change made*/                    
+  font-style: normal;
+  margin-bottom: 0;                                  /*change made*/
+}
+
+.yellowtail-regular {
+  font-family: "Yellowtail", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+  
+body {
+    width: 100%;
+    /* height: 200vh; */
+    background-color: #EEF2E3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #EEF2E3;
+    border-bottom: 2px solid #404F46;
+    position: sticky;
+}
+
+#home {
+    color: #404F46;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#second-div{
+    display: flex;
+    column-gap: 14px;
+}
+
+#second-div #home:hover {
+    color: #FF6C36;
+    /* margin: 0 10px;/  */
+    text-decoration: underline;
+  
+}
+  
+#logo {
+    color: white;
+    font-size: 2.5rem;
+}
+
+#diary{
+    /* background-color: #EEF2E3; */
+    background-color: #EEF2E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+#diary-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    align-items: start;                                    /*change made*/
+    /* padding-top: 4px; */
+}
+
+.diary-box{
+  /* width: 200px; */
+  height: auto !important; /* Remove fixed height to accommodate content */         /*change made*/
+  border-radius: 10px;                           
+  align-self: start;                                                               /*change made*/
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.diary-img{
+  width: 100%;
+  height: 200px; /* Fixed height for image */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #404F46;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #FF6C36;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: #404F46;
+    text-decoration: none;
+    cursor: pointer;
+}
+#diary-heading{
+    background-color: #EEF2E3;
+    padding-top: 2rem ;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+#diary-heading h1 a{
+    text-decoration: none;
+    color: #404F46;
+}
+
+
+.contact{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content:right;
+    padding-top: 1rem;
+    /* background-color: #EEF2E3; */
+}
+
+
+
+.contact i{
+    margin-left: 0.5rem;
+    /* padding-right: 0rem; */
+}
+
