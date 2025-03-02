@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasure Hunt</title>
+    <link rel="stylesheet" href="datestyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Yellowtail&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Yellowtail&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&family=Oleo+Script:wght@400;700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Yellowtail&display=swap');
+        
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #EEF2E3;
+        }
+
+        .oleo-script-regular {
+            font-family: "Oleo Script", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .yellowtail-regular {
+            font-family: "Yellowtail", serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        .bold {
+            color:#404F46 ;
+            font-weight: bold;
+        }
+
+        .smooch-sans {
+            font-family: "Smooch Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            word-wrap: break-word;                                  /*change made*/
+            overflow-wrap: break-word;                             /*change made*/                    
+            font-style: normal;
+            margin-bottom: 0;                                  /*change made*/
+        }
+
+        #imgs {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            max-width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #imgs img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        #imgs img.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        #imgs img.prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        @media (max-width: 650px) {
+            #imgs {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+
+        #banner{
+            /* background-color: #1A1A1D; */
+            color: white;
+            background-image: url("../stock/banner20.jpg");
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+            width: 100%;
+            /* background-attachment: fixed; */
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        #banner h1{
+            letter-spacing: 0.8rem;
+            font-size: 2em; /* Adjust font size for responsiveness */
+            margin-top: 0.5em;
+            word-wrap: break-word;
+        }
+
+        #content{
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        #content p{
+            margin-top: 1rem;
+        }
+
+        ul{
+            margin-top: 3rem;
+            margin-left: 1rem;
+        }
+
+        ul h3{
+            margin-bottom: 1rem;
+        }
+
+        ul li{
+            text-align: left;
+            padding: 5px;
+            font-size: 1.1rem;
+        }
+
+        #theam{
+            /* background-color: #1A1A1D; */
+            color: red;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #wapp-btn{
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+            margin: 1rem auto; /* Add this line to center the element */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="banner">
+            <h1 style="margin-top: 1rem;">Twilight</h1>
+            <p style="color: #FBF7BA;">We don’t sell decorations. <br>
+                We create once-in-a-lifetime love stories</p>
+        </div>
+        <div id="theam" class="oleo-script-regular"><h2>Treasure Hunt</h2></div>
+        <div id="flex">
+            <div id="imgs">
+                <!-- <button class="arrow left" onclick="prevImage()">&#9664;</button>
+                <button class="arrow right" onclick="nextImage()">&#9654;</button> -->
+                <img src="../stock/carbday.jpg" alt="" class="active">
+                <img src="../stock/beachdinner.jpg" alt="">
+                <img src="../stock/giftbox.jpg" alt="">
+            </div>
+            <div id="content">
+                <p class="smooch-sans">Turn your date into an exciting adventure filled with love, mystery, and sweet surprises! Our Love Treasure Hunt Date is the perfect way to re-live beautiful memories, create new ones, and enjoy a fun, romantic journey together.
+                </p>
+                <p class="smooch-sans">
+                Follow the clues, unlock special messages, and let each step bring you closer to a magical surprise at the final destination. Whether it's a proposal, anniversary, or just a fun date night, this experience is designed to make love feel like an adventure.
+                </p>
+
+                <ul>
+                    <h3 class="oleo-script-regular" style="font-size: 1.5rem;"> Choose Your Perfect Experience!!</h3>
+                    <li class="smooch-sans">Basic Package</li>
+                    <li class="smooch-sans">Standard Package</li>
+                    <li class="smooch-sans">Premium Package</li>
+                    <li class="smooch-sans"><span class="bold"> Add-Ons & Customization</span> <br> 
+                        Want to add a personal touch? From customized gifts and handwritten love letters to special themed décor and live music, Let’s craft your perfect love adventure!</li>
+                    <p>💡 Want something truly unique? Let’s talk and customize your dream date!</p>
+                </ul>
+                <div id="wapp-btn"><img id="whatsapp"  src="../stock/whatsappbtnblack.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("whatsapp").onclick = function () {
+            window.open("https://wa.me/9356960835?text=Hello%20there!","_blank");
+        };
+
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('#imgs img');
+        let startX = null;
+        let slideInterval;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                if (i === index) {
+                    img.classList.remove('prev');
+                    img.classList.add('active');
+                } else if (i === currentImageIndex) {
+                    img.classList.add('prev');
+                    img.classList.remove('active');
+                } else {
+                    img.classList.remove('active', 'prev');
+                }
+            });
+        }
+
+        function startSlideShow() {
+            stopSlideShow(); // Clear any existing interval
+            slideInterval = setInterval(nextImage, 2000);
+        }
+
+        function stopSlideShow() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+        }
+
+        function handleTouchStart(event) {
+            startX = event.touches[0].clientX;
+            stopSlideShow();
+        }
+
+        function handleTouchMove(event) {
+            if (!startX) return;
+
+            let endX = event.touches[0].clientX;
+            let diffX = startX - endX;
+
+            if (diffX > 50) {
+                nextImage();
+                startX = null;
+            } else if (diffX < -50) {
+                prevImage();
+                startX = null;
+            }
+        }
+
+        function handleTouchEnd() {
+            startSlideShow();
+        }
+
+        function prevImage() {
+            stopSlideShow();
+            currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+            showImage(currentImageIndex);
+            startSlideShow();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+            showImage(currentImageIndex);
+        }
+
+        // Add touch event listeners
+        const imgContainer = document.getElementById('imgs');
+        imgContainer.addEventListener('touchstart', handleTouchStart);
+        imgContainer.addEventListener('touchmove', handleTouchMove);
+        imgContainer.addEventListener('touchend', handleTouchEnd);
+
+        // Start the slideshow initially
+        startSlideShow();
+    </script>
+</body>
+</html>

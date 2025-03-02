@@ -51,6 +51,7 @@ nav {
   background-color: #EEF2E3;
   border-bottom: 2px solid #404F46;
   position: sticky;
+  top: 0;
 }
 
 #home {

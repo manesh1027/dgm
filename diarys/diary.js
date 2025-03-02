@@ -17,3 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById("d1").onclick = function () {
+    window.location.href = "../dates/movienight.html";
+};
+document.getElementById("d2").onclick = function () {
+    window.location.href = "../dates/camping.html";
+};
+document.getElementById("d3").onclick = function () {
+    window.location.href = "../dates/lantern.html";
+};
+document.getElementById("d4").onclick = function () {
+    window.location.href = "../dates/beachdinner.html";
+};
+document.getElementById("d5").onclick = function () {
+    window.location.href = "../dates/hiltop.html";
+};
+document.getElementById("d6").onclick = function () {
+    window.location.href = "../dates/rooftop.html";
+};
